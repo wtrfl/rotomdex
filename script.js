@@ -23,33 +23,56 @@ const Types = {
     "WATER": "/img/types/water.png",
 }
 
-var sampledata;
+var sampledata = [];
 
 fetch('data/sample.json')
-    .then(response => response.json())
-    .then(data => {
-        sampledata = data.data;
+  .then(response => response.json())
+  .then(data => {
+    sampledata = data.data;
+
+    // kill me right this instant
+
+    const grid = document.querySelector('[data-grid]');
+
+    console.log(sampledata)
+    sampledata.forEach((WEIRDO, index) => {
+        const e = document.createElement('div');
+        e.classList.add('grid-item');
+
+        const img = document.createElement('img');
+        const label = document.createElement('span');
+
+        img.src = "img/"+WEIRDO.image;
+        label.textContent = WEIRDO.name;
+
+        e.appendChild(img);
+        e.appendChild(label);
+        
+        e.setAttribute('data-open', index);
+        grid.appendChild(e);
     })
-    .catch(error => console.error(error));
+
+    const elements = document.querySelectorAll('[data-open]');
+
+    elements.forEach(element => {
+    const index = element.getAttribute('data-open');
+    element.addEventListener('click', () => {
+        openModal(index);
+    });
+    });
+  })
+  .catch(error => console.error(error));
 
 function openModal(index) {
     const info = sampledata[index];
     modal.querySelector('.name').textContent = info.name;
     modal.querySelector('.number').textContent = "National Dex #" + info.number;
-    modal.querySelector('.icon').src = "img/" + info.image;
+    modal.querySelector('.icon').src = "img/"+info.image;
     modal.querySelector('.type').src = Types[info.type];
     modal.classList.remove('hidden');
 }
 
-const elements = document.querySelectorAll('[data-open]');
-
-elements.forEach(element => {
-    const index = element.getAttribute('data-open');
-    element.addEventListener('click', () => {
-        openModal(index);
-    });
-});
-
 modalclose.addEventListener('click', (e) => {
     modal.classList.add('hidden');
 });
+x
