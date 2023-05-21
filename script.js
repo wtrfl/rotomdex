@@ -69,6 +69,7 @@ function openModal(index) {
     modal.querySelector('.number').textContent = "National Dex #" + info.number;
     modal.querySelector('.icon').src = "img/"+info.image;
     modal.querySelector('.type').src = Types[info.type];
+    modal.querySelector('.evolve').textContent = "Evolve Level: "+info.evolve; 
     modal.classList.remove('hidden');
 }
 

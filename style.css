@@ -84,6 +84,11 @@ img {
 
 .left > .type {
     width: 25%;
+    margin-bottom: 20px;
+}
+
+.left > .evolve {
+    font-size: .9rem;
 }
 
 .right {

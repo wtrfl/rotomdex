@@ -5,6 +5,7 @@
             "name": "Chimchar",
             "number": 390,
             "type": "FIRE",
+            "evolve": "12",
             "image": "chimchar.png",
             "locations": {
                 "dpp": "Starter Pokemon",
@@ -18,6 +19,7 @@
             "name": "Torterra",
             "number": 42069,
             "type": "FIRE",
+            "evolve": "1 billion 4 hundred million thousand",
             "image": "torterra.png",
             "locations": {
                 "dpp": "Your mom house",
