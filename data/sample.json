@@ -4,8 +4,8 @@
         {
             "name": "Chimchar",
             "number": 390,
-            "type": "fire",
-            "image": "chimchar.png",
+            "type": "FIRE",
+            "image": "test.png",
             "locations": {
                 "dpp": "Starter Pokemon",
                 "oras": "Route 101 (Beat Elite 4 for the 2nd time)",
@@ -17,8 +17,8 @@
         {
             "name": "Torterra",
             "number": 42069,
-            "type": "fire",
-            "image": "torterra.png",
+            "type": "FIRE",
+            "image": "test.png",
             "locations": {
                 "dpp": "Your mom house",
                 "oras": "test",
